@@ -6,6 +6,7 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.util.regex.Pattern;
 
+import io.restassured.RestAssured;
 import org.apache.commons.cli.BasicParser;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -30,8 +31,6 @@ import org.w3.ldp.testsuite.reporter.LdpTestListener;
 import org.w3.ldp.testsuite.test.LdpTest;
 import org.w3.ldp.testsuite.transformer.MethodEnabler;
 import org.w3.ldp.testsuite.util.OptionsHandler;
-
-import com.jayway.restassured.RestAssured;
 
 /**
  * LDP Test Suite Command-Line Interface, a wrapper to {@link org.testng.TestNG}

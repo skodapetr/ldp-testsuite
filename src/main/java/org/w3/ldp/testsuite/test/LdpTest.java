@@ -1,5 +1,8 @@
 package org.w3.ldp.testsuite.test;
 
+import io.restassured.http.Header;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.ResIterator;
@@ -7,9 +10,6 @@ import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.util.ResourceUtils;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDF;
-import com.jayway.restassured.response.Header;
-import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.marmotta.commons.vocabulary.LDP;
@@ -199,7 +199,7 @@ public abstract class LdpTest {
 	public static final String MANUAL = "MANUAL";
 
 	/**
-	 * Build a base RestAssured {@link com.jayway.restassured.specification.RequestSpecification}.
+	 * Build a base RestAssured {@link io.restassured.specification.RequestSpecification}.
 	 *
 	 * @return RestAssured Request Specification
 	 */
