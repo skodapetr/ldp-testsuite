@@ -1,0 +1,21 @@
+name: GitHub CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    name: CI environment
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'adopt'
+        java-version: 18
+    - name: Build with Maven
+      run: mvn -B -ntp install -Dmaven.javadoc.skip
