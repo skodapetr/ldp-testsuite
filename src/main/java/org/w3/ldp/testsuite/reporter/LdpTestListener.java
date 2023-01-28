@@ -54,6 +54,7 @@ public class LdpTestListener extends TestListenerAdapter {
 			errors.append("\n");
 		}
 
+		// TODO We can get rid of this to make output more readable.
 		Throwable thrown = tr.getThrowable();
 		if (thrown != null) {
 			errors.append("\n");
